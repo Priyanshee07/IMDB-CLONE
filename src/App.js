@@ -9,11 +9,17 @@ import AddUser from "./pages/AddUser";
 
 function App() {
   const [users, setUsers] = useState([]);
+  const [addUsers, setAddUsers] = useState([])
 
   const handleSignUp = (user) => {
     setUsers([...users, user]);
     alert('Sign up successful! Please login.');
   };
+
+  const handleAddUsers = (addUser)=> {
+    setUsers([...addUsers, addUser]);
+    alert('New User Added Successfully!')
+  }
 
   const handleLogin = (user) => {
     alert(`Welcome back, ${user.username}!`);
@@ -22,7 +28,6 @@ function App() {
   return (
     <div className="App">
         <div>
-
         <Header/>
         </div>
       <div className="container">
